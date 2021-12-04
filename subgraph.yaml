@@ -2,7 +2,7 @@ specVersion: 0.0.3
 description: >-
   A secure & decentralized way to address resources on and off the blockchain
   using simple, human-readable names. Access domains and transfer history.
-repository: 'https://github.com/ensdomains/ens-subgraph'
+repository: 'https://github.com/Victorious-King/fns-subgraph'
 schema:
   file: ./schema.graphql
 dataSources:
@@ -10,8 +10,9 @@ dataSources:
     name: ENSRegistry
     network: fantom
     source:
-      address: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e'
+      address: '0xC000f5161A12f0a300B2c7FB6F562a6226C0DDa6'
       abi: EnsRegistry
+      startBlock: 23618495
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -34,37 +35,12 @@ dataSources:
         - event: 'NewTTL(indexed bytes32,uint64)'
           handler: handleNewTTL
   - kind: ethereum/contract
-    name: ENSRegistryOld
-    network: fantom
-    source:
-      address: '0x314159265dd8dbb310642f98f50c066173c1259b'
-      abi: EnsRegistry
-    mapping:
-      kind: ethereum/events
-      apiVersion: 0.0.5
-      language: wasm/assemblyscript
-      file: ./src/ensRegistry.ts
-      entities:
-        - Domain
-        - Account
-        - Resolver
-      abis:
-        - name: EnsRegistry
-          file: ./abis/Registry.json
-      eventHandlers:
-        - event: 'Transfer(indexed bytes32,address)'
-          handler: handleTransferOldRegistry
-        - event: 'NewOwner(indexed bytes32,indexed bytes32,address)'
-          handler: handleNewOwnerOldRegistry
-        - event: 'NewResolver(indexed bytes32,address)'
-          handler: handleNewResolverOldRegistry
-        - event: 'NewTTL(indexed bytes32,uint64)'
-          handler: handleNewTTLOldRegistry
-  - kind: ethereum/contract
     name: Resolver
     network: fantom
-    source:
+    source:  
+      address: '0x6F85Dbf9607567862F8A8cC5E3406b34E2acc36a'
       abi: Resolver
+      startBlock: 23618523
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -79,7 +55,6 @@ dataSources:
         - Textchanged
         - ContenthashChanged
         - InterfaceChanged
-        - AuthorisationChanged
       abis:
         - name: Resolver
           file: ./abis/PublicResolver.json
@@ -90,8 +65,6 @@ dataSources:
           handler: handleAddrChanged
         - event: 'AddressChanged(indexed bytes32,uint256,bytes)'
           handler: handleMulticoinAddrChanged
-        - event: 'AuthorisationChanged(indexed bytes32,indexed address,indexed address,bool)'
-          handler: handleAuthorisationChanged
         - event: 'ContenthashChanged(indexed bytes32,bytes)'
           handler: handleContentHashChanged
         - event: 'InterfaceChanged(indexed bytes32,indexed bytes4,address)'
@@ -106,8 +79,9 @@ dataSources:
     name: BaseRegistrar
     network: fantom
     source:
-      address: '0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85'
+      address: '0xE8F09aF00435BC821f86A70098a9907240fb9978'
       abi: BaseRegistrar
+      startBlock: 23618523
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -132,8 +106,9 @@ dataSources:
     name: EthRegistrarController
     network: fantom
     source:
-      address: '0x283Af0B28c62C092C9727F1Ee09c02CA627EB7F5'
+      address: '0x985DF14B5c37cB331d5719153D91EaBD71f610fb'
       abi: EthRegistrarController
+      startBlock: 23618559
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5

@@ -10,13 +10,13 @@
     "deploy-local": "graph deploy graphprotocol/ens --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020/",
     "remove-local": "graph remove graphprotocol/ens --node http://127.0.0.1:8020",
     "docker:setup": "npm run codegen && npm run docker:create-local && npm run docker:deploy-local",
-	"auth": "graph auth --product hosted-service Victorious-King/Fnsdomains 28a5188b68c740f8b426cd9969532812",
+	"auth": "graph auth --product hosted-service victorious-king/Fnsdomains 28a5188b68c740f8b426cd9969532812",
     "docker:create-local": "graph create graphprotocol/ens --node http://ens-app_graph-node_1:8020",
     "docker:deploy-local": "graph deploy graphprotocol/ens --debug --ipfs http://ens-app_ipfs_1:5001 --node http://ens-app_graph-node_1:8020/",
     "docker:remove-local": "graph remove graphprotocol/ens --node http://ens-app_graph-node_1:8020",
     "build": "graph build",
     "deploy": "graph deploy ensdomains/ens --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
-    "ftmdeploy": "graph deploy --product hosted-service Victorious-King/Fnsdomains"
+    "ftmdeploy": "graph deploy --access-token 28a5188b68c740f8b426cd9969532812 --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ Victorious-King/Fnsdomains subgraph.yaml"
   },
   "devDependencies": {
     "@ensdomains/content-hash": "^2.5.7",

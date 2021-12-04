@@ -2,7 +2,6 @@ import {
   ABIChanged as ABIChangedEvent,
   AddrChanged as AddrChangedEvent,
   AddressChanged as AddressChangedEvent,
-  AuthorisationChanged as AuthorisationChangedEvent,
   ContenthashChanged as ContenthashChangedEvent,
   InterfaceChanged as InterfaceChangedEvent,
   NameChanged as NameChangedEvent,
@@ -21,7 +20,6 @@ import {
   PubkeyChanged,
   ContenthashChanged,
   InterfaceChanged,
-  AuthorisationChanged,
   TextChanged,
 } from './types/schema'
 
@@ -166,17 +164,6 @@ export function handleInterfaceChanged(event: InterfaceChangedEvent): void {
   resolverEvent.transactionID = event.transaction.hash
   resolverEvent.interfaceID = event.params.interfaceID
   resolverEvent.implementer = event.params.implementer
-  resolverEvent.save()
-}
-
-export function handleAuthorisationChanged(event: AuthorisationChangedEvent): void {
-  let resolverEvent = new AuthorisationChanged(createEventID(event))
-  resolverEvent.blockNumber = event.block.number.toI32()
-  resolverEvent.transactionID = event.transaction.hash
-  resolverEvent.resolver = createResolverID(event.params.node, event.address)
-  resolverEvent.owner = event.params.owner
-  resolverEvent.target = event.params.target
-  resolverEvent.isAuthorized = event.params.isAuthorised
   resolverEvent.save()
 }
 

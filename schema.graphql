@@ -189,12 +189,3 @@ type InterfaceChanged implements ResolverEvent @entity {
   implementer: Bytes!
 }
 
-type AuthorisationChanged implements ResolverEvent @entity {
-  id: ID!
-  resolver: Resolver!
-  blockNumber: Int!
-  transactionID: Bytes!
-  owner: Bytes!
-  target: Bytes!
-  isAuthorized: Boolean!
-}

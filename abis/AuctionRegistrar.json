@@ -1,413 +1,23 @@
 [
   {
-    "constant": false,
     "inputs": [
       {
-        "name": "_hash",
-        "type": "bytes32"
-      }
-    ],
-    "name": "releaseDeed",
-    "outputs": [],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "_hash",
-        "type": "bytes32"
-      }
-    ],
-    "name": "getAllowedTime",
-    "outputs": [
-      {
-        "name": "timestamp",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "unhashedName",
-        "type": "string"
-      }
-    ],
-    "name": "invalidateName",
-    "outputs": [],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "hash",
-        "type": "bytes32"
-      },
-      {
-        "name": "owner",
-        "type": "address"
-      },
-      {
-        "name": "value",
-        "type": "uint256"
-      },
-      {
-        "name": "salt",
-        "type": "bytes32"
-      }
-    ],
-    "name": "shaBid",
-    "outputs": [
-      {
-        "name": "sealedBid",
-        "type": "bytes32"
-      }
-    ],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "bidder",
-        "type": "address"
-      },
-      {
-        "name": "seal",
-        "type": "bytes32"
-      }
-    ],
-    "name": "cancelBid",
-    "outputs": [],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "_hash",
-        "type": "bytes32"
-      }
-    ],
-    "name": "entries",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint8"
-      },
-      {
-        "name": "",
-        "type": "address"
-      },
-      {
-        "name": "",
-        "type": "uint256"
-      },
-      {
-        "name": "",
-        "type": "uint256"
-      },
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "ens",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_hash",
-        "type": "bytes32"
-      },
-      {
-        "name": "_value",
-        "type": "uint256"
-      },
-      {
-        "name": "_salt",
-        "type": "bytes32"
-      }
-    ],
-    "name": "unsealBid",
-    "outputs": [],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_hash",
-        "type": "bytes32"
-      }
-    ],
-    "name": "transferRegistrars",
-    "outputs": [],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "",
-        "type": "address"
-      },
-      {
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
-    "name": "sealedBids",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "_hash",
-        "type": "bytes32"
-      }
-    ],
-    "name": "state",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint8"
-      }
-    ],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_hash",
-        "type": "bytes32"
-      },
-      {
-        "name": "newOwner",
-        "type": "address"
-      }
-    ],
-    "name": "transfer",
-    "outputs": [],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "_hash",
-        "type": "bytes32"
-      },
-      {
-        "name": "_timestamp",
-        "type": "uint256"
-      }
-    ],
-    "name": "isAllowed",
-    "outputs": [
-      {
-        "name": "allowed",
-        "type": "bool"
-      }
-    ],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_hash",
-        "type": "bytes32"
-      }
-    ],
-    "name": "finalizeAuction",
-    "outputs": [],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "registryStarted",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "launchLength",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint32"
-      }
-    ],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "sealedBid",
-        "type": "bytes32"
-      }
-    ],
-    "name": "newBid",
-    "outputs": [],
-    "payable": true,
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "labels",
-        "type": "bytes32[]"
-      }
-    ],
-    "name": "eraseNode",
-    "outputs": [],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_hashes",
-        "type": "bytes32[]"
-      }
-    ],
-    "name": "startAuctions",
-    "outputs": [],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "hash",
-        "type": "bytes32"
-      },
-      {
-        "name": "deed",
-        "type": "address"
-      },
-      {
-        "name": "registrationDate",
-        "type": "uint256"
-      }
-    ],
-    "name": "acceptRegistrarTransfer",
-    "outputs": [],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_hash",
-        "type": "bytes32"
-      }
-    ],
-    "name": "startAuction",
-    "outputs": [],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "rootNode",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
-    "payable": false,
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "hashes",
-        "type": "bytes32[]"
-      },
-      {
-        "name": "sealedBid",
-        "type": "bytes32"
-      }
-    ],
-    "name": "startAuctionsAndBid",
-    "outputs": [],
-    "payable": true,
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
+        "internalType": "contract ENS",
         "name": "_ens",
         "type": "address"
       },
       {
+        "internalType": "bytes32",
         "name": "_rootNode",
         "type": "bytes32"
       },
       {
+        "internalType": "uint256",
         "name": "_startDate",
         "type": "uint256"
       }
     ],
-    "payable": false,
+    "stateMutability": "nonpayable",
     "type": "constructor"
   },
   {
@@ -415,11 +25,13 @@
     "inputs": [
       {
         "indexed": true,
+        "internalType": "bytes32",
         "name": "hash",
         "type": "bytes32"
       },
       {
         "indexed": false,
+        "internalType": "uint256",
         "name": "registrationDate",
         "type": "uint256"
       }
@@ -432,43 +44,25 @@
     "inputs": [
       {
         "indexed": true,
+        "internalType": "bytes32",
         "name": "hash",
         "type": "bytes32"
       },
       {
         "indexed": true,
-        "name": "bidder",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "name": "deposit",
-        "type": "uint256"
-      }
-    ],
-    "name": "NewBid",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "name": "hash",
-        "type": "bytes32"
-      },
-      {
-        "indexed": true,
+        "internalType": "address",
         "name": "owner",
         "type": "address"
       },
       {
         "indexed": false,
+        "internalType": "uint256",
         "name": "value",
         "type": "uint256"
       },
       {
         "indexed": false,
+        "internalType": "uint8",
         "name": "status",
         "type": "uint8"
       }
@@ -481,21 +75,56 @@
     "inputs": [
       {
         "indexed": true,
+        "internalType": "bytes32",
         "name": "hash",
         "type": "bytes32"
       },
       {
         "indexed": true,
-        "name": "owner",
-        "type": "address"
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
       },
       {
         "indexed": false,
+        "internalType": "uint256",
         "name": "value",
         "type": "uint256"
       },
       {
         "indexed": false,
+        "internalType": "uint256",
+        "name": "registrationDate",
+        "type": "uint256"
+      }
+    ],
+    "name": "HashInvalidated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "hash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
         "name": "registrationDate",
         "type": "uint256"
       }
@@ -508,11 +137,13 @@
     "inputs": [
       {
         "indexed": true,
+        "internalType": "bytes32",
         "name": "hash",
         "type": "bytes32"
       },
       {
         "indexed": false,
+        "internalType": "uint256",
         "name": "value",
         "type": "uint256"
       }
@@ -525,26 +156,439 @@
     "inputs": [
       {
         "indexed": true,
+        "internalType": "bytes32",
         "name": "hash",
         "type": "bytes32"
       },
       {
         "indexed": true,
-        "name": "name",
-        "type": "string"
+        "internalType": "address",
+        "name": "bidder",
+        "type": "address"
       },
       {
         "indexed": false,
-        "name": "value",
+        "internalType": "uint256",
+        "name": "deposit",
         "type": "uint256"
+      }
+    ],
+    "name": "NewBid",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "hash",
+        "type": "bytes32"
       },
       {
-        "indexed": false,
+        "internalType": "contract Deed",
+        "name": "deed",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
         "name": "registrationDate",
         "type": "uint256"
       }
     ],
-    "name": "HashInvalidated",
-    "type": "event"
+    "name": "acceptRegistrarTransfer",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "bidder",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "seal",
+        "type": "bytes32"
+      }
+    ],
+    "name": "cancelBid",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "ens",
+    "outputs": [
+      {
+        "internalType": "contract ENS",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_hash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "entries",
+    "outputs": [
+      {
+        "internalType": "enum Registrar.Mode",
+        "name": "",
+        "type": "uint8"
+      },
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32[]",
+        "name": "labels",
+        "type": "bytes32[]"
+      }
+    ],
+    "name": "eraseNode",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_hash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "finalizeAuction",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_hash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getAllowedTime",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "unhashedName",
+        "type": "string"
+      }
+    ],
+    "name": "invalidateName",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_hash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_timestamp",
+        "type": "uint256"
+      }
+    ],
+    "name": "isAllowed",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "allowed",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "launchLength",
+    "outputs": [
+      {
+        "internalType": "uint32",
+        "name": "",
+        "type": "uint32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "sealedBid",
+        "type": "bytes32"
+      }
+    ],
+    "name": "newBid",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "registryStarted",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_hash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "releaseDeed",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "rootNode",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "name": "sealedBids",
+    "outputs": [
+      {
+        "internalType": "contract Deed",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "hash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "salt",
+        "type": "bytes32"
+      }
+    ],
+    "name": "shaBid",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_hash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "startAuction",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32[]",
+        "name": "_hashes",
+        "type": "bytes32[]"
+      }
+    ],
+    "name": "startAuctions",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32[]",
+        "name": "hashes",
+        "type": "bytes32[]"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "sealedBid",
+        "type": "bytes32"
+      }
+    ],
+    "name": "startAuctionsAndBid",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_hash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "state",
+    "outputs": [
+      {
+        "internalType": "enum Registrar.Mode",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_hash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address payable",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transfer",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_hash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "transferRegistrars",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_hash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_value",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "_salt",
+        "type": "bytes32"
+      }
+    ],
+    "name": "unsealBid",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
   }
 ]
